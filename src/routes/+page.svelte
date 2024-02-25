@@ -4,7 +4,7 @@
 
     const getData = async () => {
         const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&timezone=Europe%2FBerlin');
-        const jsonData = res.json(); 
+        const jsonData = await res.json(); 
     
         console.log(jsonData);
     }
